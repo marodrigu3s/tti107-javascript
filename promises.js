@@ -31,8 +31,22 @@
 
 
 const calcular = (numero) => {
+    //Desafio 1
     //se o usuário informar um número positivo, fazer como antes
-    Promise.resolve
+    // if (numero >= 1){
+    //     return Promise.resolve (
+    //         (numero/2) * (numero+1)
+    //     )
+    // }
     //senão, ou seja, se ele informar um número negativo, devolver uma promise no estado rejected, com a mensagem "o número deve ser positivo"
-    Promise.
+    //return Promise.reject("O número deve ser positivo")
+
+    //Desafio 2: refazer usando o operador ternário
+    res = (numero >= 1 ? Promise.resolve((numero/2) * (numero +1)) : Promise.reject("O número deve ser positivo"))
+    return res
 }
+
+calcular(10)
+.then(res => console.log(res))
+.catch(erro => console.log("Erro: " + erro))
+
